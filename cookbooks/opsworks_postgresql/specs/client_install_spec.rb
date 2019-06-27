@@ -7,8 +7,8 @@ describe_recipe "opsworks_postgresql::client_install" do
   it "installs packages for client" do
     case node[:platform]
     when "centos","redhat","fedora","amazon"
-      package("postgresql-devel").must_be_installed
-      package("postgresql").must_be_installed
+      package("postgresql96-devel").must_be_installed
+      package("postgresql96").must_be_installed
     when "debian","ubuntu"
       package("libpq-dev").must_be_installed
       package("postgresql-client").must_be_installed
