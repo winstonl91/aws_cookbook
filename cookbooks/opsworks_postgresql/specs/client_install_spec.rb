@@ -1,6 +1,6 @@
 require "minitest/spec"
 
-describe_recipe "postgresql::client_install" do
+describe_recipe "opsworks_postgresql::client_install" do
   include MiniTest::Chef::Resources
   include MiniTest::Chef::Assertions
 
